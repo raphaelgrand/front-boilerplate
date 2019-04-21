@@ -1,0 +1,17 @@
+{
+  "name": "front-boilerplate-ragra",
+  "version": "1.0.0",
+  "description": "A front boilerplate for javascript projects",
+  "repository": "git@github.com:raphaelgrand/front-boilerplate.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Raphaël Grand <neon@grugru.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}
