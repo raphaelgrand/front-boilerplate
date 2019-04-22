@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.bundle.css %>">
     <title>Front Boilerplate</title>
 </head>
 <body>
-<script src="bundle.js"></script>
+<script src="<%= htmlWebpackPlugin.files.chunks.bundle.entry %>"></script>
 </body>
 </html>
