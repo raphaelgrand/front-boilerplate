@@ -3,6 +3,7 @@ import './index.scss';
 
 const title = document.createElement('h1');
 const paragraph = document.createElement('p');
+console.log('pwet');
 
 paragraph.innerHTML = message;
 paragraph.classList.add('paragraph');
