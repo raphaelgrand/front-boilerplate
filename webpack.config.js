@@ -10,10 +10,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: "bundle.js"
     },
-    plugins: [
-        new HtmlWebpackPlugin(),
-        new MiniCssExtractPlugin('styles.css')
-    ],
     module: {
         rules: [
             {
@@ -33,5 +29,16 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: true,
+            template: './assets/index.html',
+            filename: 'index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
+        })
+    ],
 };
