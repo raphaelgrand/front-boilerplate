@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        bundle: './assets/index.js'
+        bundle: './assets/js/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -38,6 +38,11 @@ module.exports = {
                     'postcss-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.ejs$/,
+                loader: 'ejs-loader',
+                exclude: /node_modules/
             }
         ]
     },
@@ -46,7 +51,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: './assets/index.html',
+            template: './assets/ejs/index.ejs',
             filename: 'index.html'
         }),
         new MiniCssExtractPlugin({

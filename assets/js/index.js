@@ -1,5 +1,5 @@
 import message from './message';
-import './index.scss';
+import '../scss/index.scss';
 
 const title = document.createElement('h1');
 const paragraph = document.createElement('p');
