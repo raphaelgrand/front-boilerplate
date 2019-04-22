@@ -1,8 +1,8 @@
-const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -31,6 +31,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
@@ -41,8 +42,10 @@ module.exports = {
       },
       {
         test: /\.ejs$/,
-        loader: 'ejs-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: {
+          loader: 'compile-ejs-loader'
+        }
       },
       {
         test: /\.svg$/,
@@ -56,13 +59,13 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      inject: false,
+      inject: 'body',
       hash: true,
-      template: './assets/ejs/index.ejs',
-      filename: 'index.html'
+      template: './ejs/pages/index.ejs',
+      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: 'style.[contenthash].min.css'
     }),
     new WebpackMd5Hash()
   ],
