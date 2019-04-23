@@ -2,7 +2,7 @@
   "presets": [[
     "env", {
       "targets": {
-        "browsers": ["Chrome >= 55"]
+        "browsers": ["last 2 versions", "safari >= 7"]
       }
     }
   ]]

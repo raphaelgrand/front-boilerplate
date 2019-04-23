@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --watch",
+    "dev": "webpack-dev-server -d --mode development --watch",
     "lint": "eslint ./assets/ --ext .js --fix"
   },
   "keywords": [],
@@ -41,7 +41,8 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
-    "webpack-md5-hash": "^0.0.6"
+    "webpack-md5-hash": "^0.0.6",
+    "file-loader": "^3.0.1"
   },
   "dependencies": {
     "@babel/core": "^7.4.3",

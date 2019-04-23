@@ -6,11 +6,11 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
   entry: {
-    bundle: './assets/js/index.js'
+    bundle: './assets/js/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -19,15 +19,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'eslint-loader'
-        }
+          loader: 'eslint-loader',
+        },
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.scss$/,
@@ -37,24 +37,46 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.ejs$/,
         exclude: /node_modules/,
         use: {
-          loader: 'compile-ejs-loader'
-        }
+          loader: 'compile-ejs-loader',
+        },
       },
       {
         test: /\.svg$/,
         use: [
           'svg-sprite-loader',
-          'svgo-loader'
-        ]
-      }
-    ]
+          'svgo-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '/fonts/[name].[ext]',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -65,8 +87,11 @@ module.exports = {
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].min.css'
+      filename: 'css/style.[contenthash].min.css',
     }),
-    new WebpackMd5Hash()
+    new WebpackMd5Hash(),
   ],
+  devServer: {
+    open: true,
+  },
 };
