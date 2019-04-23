@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: {
@@ -90,6 +91,7 @@ module.exports = {
       filename: 'css/style.[contenthash].min.css',
     }),
     new WebpackMd5Hash(),
+    new DashboardPlugin(),
   ],
   devServer: {
     open: true,
