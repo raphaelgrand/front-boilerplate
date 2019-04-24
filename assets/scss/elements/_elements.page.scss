@@ -1,0 +1,17 @@
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  background-color: $blue-smile;
+
+  font-family: $font-family-main;
+  /* stylelint-disable unit-whitelist */
+  font-size: 0.625em;
+  font-size: calc(1em * 0.625);
+  /* stylelint-enable */
+}
+
+body {
+  margin: 0;
+}

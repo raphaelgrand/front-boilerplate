@@ -1,0 +1,29 @@
+.c-header {
+  font-family: $font-family-heading;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem 0;
+
+    background-color: $white;
+
+    color: $blue-smile;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+  }
+
+  &__logo {
+    height: 5.4rem;
+  }
+
+  &__subtitle {
+    display: block;
+    height: 5.4rem;
+
+    line-height: 4.9rem;
+  }
+}
