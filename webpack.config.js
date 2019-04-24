@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const DashboardPlugin = require('webpack-dashboard/plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -89,6 +90,14 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.[contenthash].min.css',
+    }),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'assets/scss',
+      files: '**/*.scss',
+      failOnError: false,
+      quiet: false,
+      syntax: 'scss',
     }),
     new WebpackMd5Hash(),
     new DashboardPlugin(),
