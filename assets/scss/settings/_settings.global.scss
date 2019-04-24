@@ -1,0 +1,26 @@
+/* ===========================================================
+   #GLOBAL
+   =========================================================== */
+
+/* Transition variables.
+   =========================================================== */
+$transition:              all 300ms ease-in-out;
+
+/* Outline variables.
+   =========================================================== */
+$outline-style:           dotted;
+$outline-width:           0.1rem;
+$outline-color:           $color-main;
+
+/* Selection variables.
+   =========================================================== */
+$selection-background:    $color-main;
+$selection-color:         $white;
+
+/* Spacing variables.
+   =========================================================== */
+$global-spacing-unit-xs:  1rem;
+$global-spacing-unit-sm:  2rem;
+$global-spacing-unit-md:  4rem;
+$global-spacing-unit-lg:  6rem;
+$global-spacing-unit-xl:  8rem;

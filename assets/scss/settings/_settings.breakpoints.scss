@@ -1,0 +1,40 @@
+/* ===========================================================
+   #BREAKPOINTS
+   =========================================================== */
+
+/**
+ * Override the configuration os fass-mq.
+ * @see {@link https://github.com/sass-mq/sass-mq}
+ */
+
+/**
+ * Breakpoints declaration
+ *
+ * Name your breakpoints in a way that creates a ubiquitous language
+ * across team members. It will improve communication between
+ * stakeholders, designers, developers, and testers.
+ *
+ * If the design isn't mobile first you can change the breakpoint to
+ * use sass-mq for desktop first design like this :
+ *
+ * ```
+ *   $bp-tablet: 1024px;
+ *   $bp-mobile: 768px;
+ * ```
+ *
+ * You also need to change all first parameters of the mq mixins by $until.
+ */
+
+/* stylelint-disable unit-whitelist */
+$bp-desktop:  1400px; /* Desktop breakpoints */
+$bp-tablet:   1024px; /* Tablet breakpoints */
+$bp-phablet:  768px;  /* Phablet breakpoints */
+$bp-mobile:   480px;  /* Mobile breakpoints */
+
+$mq-breakpoints: (
+  desktop:  $bp-desktop,
+  tablet:   $bp-tablet,
+  phablet:  $bp-phablet,
+  mobile:   $bp-mobile
+);
+/* stylelint-enable */

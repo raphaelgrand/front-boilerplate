@@ -1,2 +1,24 @@
+/* ===========================================================
+   SETTINGS
+   =========================================================== */
+
+/**
+ * The settings-layer contains all the global Design System variables,
+ * so it defines colors, spacings, font-sizes, breakpoints settings and many more.
+ * It's important not to ouptut any CSS in this layers.
+ */
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Breakpoints......Override the sass-mq library variables.
+ * Colors...........Manage the color palette in isolation.
+ * Text.............Set up related text variables.
+ * Global...........Globally-available variables and settings/config.
+ */
+
+@import "settings.breakpoints";
 @import "settings.colors";
 @import "settings.text";
+@import "settings.global";
