@@ -1,0 +1,22 @@
+/* ===========================================================
+   OBJECTS
+   =========================================================== */
+
+/**
+ * The object layer class-based selectors defines undecorated design patterns,
+ * for example media object known from OOCSS.
+ *
+ * Classes in this layer are prefixed with 'o-'.
+ */
+
+/**
+ * CONTENTS
+ *
+ * OBJECTS
+ * Table..............Simple table styles.
+ * Grid...............Basic grid system based on flexbox.
+ * Iframe.............Object used to add responsive to iframes.
+ */
+
+@import "objects.table";
+@import "objects.grid";

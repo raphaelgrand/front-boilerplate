@@ -1,0 +1,65 @@
+/* ===========================================================
+   #GRID
+   =========================================================== */
+
+$grid-gutter: 2rem;
+
+/**
+ * Basic grid object.
+ *
+ * By default, the child items are displayed with the row direction, wrapped,
+ * and positioned with defualt flex options
+ */
+
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$grid-gutter / 2;
+
+  > * {
+    padding: $grid-gutter /2;
+  }
+}
+
+/* Gutter variants
+   =========================================================== */
+
+.o-grid--no-gutter {
+  margin: 0;
+
+  > * {
+    padding: 0;
+  }
+}
+
+.o-grid--gutter-xl {
+  margin: -$grid-gutter;
+
+  > * {
+    padding: $grid-gutter;
+  }
+}
+
+/* Position variants
+   =========================================================== */
+
+.o-grid--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.o-grid--center-vertically {
+  align-items: center;
+}
+
+.o-grid--center-horizontally {
+  justify-content: center;
+}
+
+.o-grid--space-between {
+  justify-content: space-between;
+}
+
+.o-grid--space-around {
+  justify-content: space-around;
+}
