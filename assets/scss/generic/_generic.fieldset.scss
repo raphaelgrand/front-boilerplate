@@ -1,0 +1,13 @@
+/* ===========================================================
+   #FIELDSET
+   =========================================================== */
+
+/**
+ * 1. Reset Chrome and Firefox behavior that sets 'min-width: min-content;'
+ *    on fieldsets.
+ */
+fieldset {
+  min-width: 0; /* [1] */
+
+  border: 0;
+}

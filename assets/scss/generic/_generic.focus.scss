@@ -1,0 +1,12 @@
+/* ===========================================================
+   #FOCUS
+   =========================================================== */
+
+/*
+ * Style for outline.
+ * @see http://a11yproject.com/posts/never-remove-css-outlines/
+ */
+
+*:focus {
+  outline: $outline-width $outline-style $outline-color;
+}

@@ -1,0 +1,27 @@
+/* ===========================================================
+   GENERIC
+   =========================================================== */
+
+/**
+ * Reset and/or normalize styles, box-sizing definition, etc.
+ * This is the first layer which generates actual CSS.
+ */
+
+/**
+ * CONTENTS
+ *
+ * GENERIC
+ * box-sizing........Better default 'box-sizing'.
+ * Normalize.css.....A level playing field using @necolas' Normalize.css.
+ *                   Imported from the nod_modules folder.
+ * Focus.............Reset focus outline style.
+ * Selection.........Reset selection highlight background.
+ * Table.............Reset table border.
+ * Fieldset..........Reset fieldset border and size.
+ */
+@import "generic.box-sizing";
+@import "~normalize.css/normalize";
+@import "generic.focus";
+@import "generic.selection";
+@import "generic.table";
+@import "generic.fieldset";
