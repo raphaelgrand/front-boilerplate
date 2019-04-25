@@ -63,3 +63,36 @@ $grid-gutter: 2rem;
 .o-grid--space-around {
   justify-content: space-around;
 }
+
+/* Order variants
+   =========================================================== */
+
+/* Avoid element in the grid to wrap */
+.o-grid--nowrap {
+  flex-wrap: nowrap;
+}
+
+/* Reverse item's lit order */
+.o-grid--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Put this on a child item in order to set its place in first position */
+.o-grid--item-first {
+  order: -1;
+}
+
+/* Put this on a child item in order to set its place in last position */
+.o-grid--item-last {
+  order: 1;
+}
+
+/* Item height variants
+   =========================================================== */
+
+/* Stretch items vertically in order to give them the same height */
+.o-grid--equal-height {
+  > * {
+    display: flex;
+  }
+}
