@@ -1,0 +1,34 @@
+/* ===========================================================
+   #STRIP
+   =========================================================== */
+
+/*
+ * Show link text as text wihtout decoration.
+ */
+.u-strip--link {
+  color: inherit !important;
+  text-decoration: none !important;
+
+  transition: none !important;
+}
+
+/*
+ * Show link text as text wihtout underline.
+ */
+.u-strip--link-no-underline {
+  text-decoration: none !important;
+}
+
+/*
+ * Show list content as text wihtout decoration.
+ */
+.u-strip--list {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  list-style: none !important;
+
+  li {
+    font-size: inherit !important;
+  }
+}

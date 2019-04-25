@@ -1,0 +1,10 @@
+/* ===========================================================
+   #CLEARFIX
+   =========================================================== */
+
+/**
+ * Attach the clearfix mixin to an utility class.
+ */
+.u-clearfix {
+  @include clearfix();
+}

@@ -1,0 +1,52 @@
+/* ===========================================================
+   #SPACING
+   =========================================================== */
+
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate a suite of classes like:
+ *
+ *  .u-margin-top {}
+ *  .u-margin-left-xs {}
+ *  .u-margin-vertical {}
+ *  .u-margin-vertical--xl {}
+ */
+
+$spacing-directions: (
+  null: null,
+  '-top':         '-top',
+  '-bottom':      '-bottom',
+  '-right':       '-right',
+  '-left':        '-left',
+  '-vertical':    '-top' '-bottom',
+  '-horizontal':  '-left' '-right',
+);
+
+$spacing-properties: (
+  'margin': 'margin',
+);
+
+$spacing-sizes: (
+  null:     $global-spacing-unit-md,
+  '--xs':   $global-spacing-unit-xs,
+  '--sm':   $global-spacing-unit-sm,
+  '--md':   $global-spacing-unit-md,
+  '--lg':   $global-spacing-unit-lg,
+  '--xl':   $global-spacing-unit-xl,
+  '--auto': auto,
+  '--none': 0
+);
+
+@mixin spacings($spacing-properties, $breakpoint: null) {
+  @each $property-namespace, $property in $spacing-properties {
+    @each $direction-namespace, $direction-rules in $spacing-directions {
+      @each $size-namespace, $size in $spacing-sizes {
+        .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace}#{$breakpoint} {
+          @each $direction in $direction-rules {
+            #{$property}#{$direction}: $size !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/* ===========================================================
+   #TEXT
+   =========================================================== */
+
+/* Font declaration utilities
+   ========================================================================== */
+
+.u-text--xl {
+  font-size: $font-size-xl !important;
+}
+
+.u-text--sm {
+  font-size: $font-size-sm !important;
+}
+
+/* Text decoration utilities
+   ========================================================================== */
+
+.u-text--strike {
+  text-decoration: line-through !important;
+}
+
+.u-text--underline {
+  text-decoration: underline !important;
+}
+
+/* Line-height declaration utilities
+   ========================================================================== */
+
+.u-line-height--xl {
+  line-height: $line-height-xl !important;
+}
+
+.u-line-height--sm {
+  line-height: $line-height-sm !important;
+}
