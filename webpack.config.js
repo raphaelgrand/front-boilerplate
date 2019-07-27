@@ -80,14 +80,16 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    open: true,
+  },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      inject: 'body',
       hash: true,
       template: './ejs/pages/index.ejs',
       filename: 'index.html',
     }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/style.[contenthash].min.css',
     }),
@@ -102,7 +104,4 @@ module.exports = {
     new WebpackMd5Hash(),
     new DashboardPlugin(),
   ],
-  devServer: {
-    open: true,
-  },
 };
